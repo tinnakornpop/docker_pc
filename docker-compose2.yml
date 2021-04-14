@@ -2,8 +2,8 @@ version: '3'
 
 services:
   git:
-    container_name: git
+    container_name: gitpc
     image: tinnakornpop/docker_pc:latest
     volumes:
-      - $HOME/git:/git:delegated
+      - $HOME/gitpc:/gitpc:delegated
       - $HOME/.netrcpc:/root/.netrcpc:ro

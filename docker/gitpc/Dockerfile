@@ -78,7 +78,7 @@ RUN wget https://raw.githubusercontent.com/git/git/master/contrib/completion/git
 
 # bashrc
 # RUN echo 'export PS1="[\u@"$(hostname -i)" \w]$ "' >> ~/.bashrc
-# RUN echo 'export PS1="[docker_git \w]$ "' >> ~/.bashrc
+# RUN echo 'export PS1="[docker_pc \w]$ "' >> ~/.bashrc
 RUN echo 'export PS1="\[\033[1;34m\]docker_pc \[\033[0;33m\]\w\[\033[36m\]\$(__git_ps1) \[\033[0;00m\]\\]\n$ "' >> ~/.bashrc
 
 
@@ -93,7 +93,7 @@ RUN git secrets --register-aws --global
 
 
 # finalize
-WORKDIR /git
+WORKDIR /gitpc
 
 COPY ./docker-entrypoint.sh /docker-entrypoint.sh
 RUN chmod 0755 /docker-entrypoint.sh
