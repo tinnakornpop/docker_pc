@@ -31,17 +31,17 @@ docker-compose run git "YourName" "YourEmail"
 
 ### Docker-compose build and run
 ```
-cd ~/git/docker_pc
+cd ~/gitpc/docker_pc
 docker-compose build
 docker-compose run git "YourName" "YourEmail"
 ```
 
 ### Build command (Developer's memo)
 ```
-cd ~/git/docker_git/docker/git
-docker build . -t tinnakornpop/docker_git:0.0.6
-docker build . -t tinnakornpop/docker_git:latest
+cd ~/gitpc/docker_pc/docker/gitpc
+docker build . -t tinnakornpop/docker_pc:0.0.6
+docker build . -t tinnakornpop/docker_pc:latest
 docker login
-docker push tinnakornpop/docker_git:0.0.6
-docker push tinnakornpop/docker_git:latest
+docker push tinnakornpop/docker_pc:0.0.6
+docker push tinnakornpop/docker_pc:latest
 ```
