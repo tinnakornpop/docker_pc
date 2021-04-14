@@ -20,7 +20,7 @@ password ******
 ```
 mkdir ~/gitpc
 cd ~/gitpc
-curl --output docker-compose.yml https://raw.githubusercontent.com/tinnakornpop/docker_git/master/docker-compose2.yml
+curl --output docker-compose.yml https://raw.githubusercontent.com/tinnakornpop/docker_pc/laravel/docker-compose2.yml
 ```
 
 ### How to use (recommend)
