@@ -1,4 +1,4 @@
-# docker_git
+# docker_pc
 
 How to use
 
@@ -7,7 +7,7 @@ How to use
 echo 'machine github.com
 login ******
 password ******
-' > ~/.netrc
+' > ~/.netrcpc
 ```
 
 | key       | value                |
@@ -18,20 +18,20 @@ password ******
 ### prepare docker-compose
 
 ```
-mkdir ~/git
-cd ~/git
-curl --output docker-compose.yml https://raw.githubusercontent.com/lastshogun13/docker_git/master/docker-compose2.yml
+mkdir ~/gitpc
+cd ~/gitpc
+curl --output docker-compose.yml https://raw.githubusercontent.com/tinnakornpop/docker_git/master/docker-compose2.yml
 ```
 
 ### How to use (recommend)
 ```
-cd ~/git
+cd ~/gitpc
 docker-compose run git "YourName" "YourEmail"
 ```
 
 ### Docker-compose build and run
 ```
-cd ~/git/docker_git
+cd ~/git/docker_pc
 docker-compose build
 docker-compose run git "YourName" "YourEmail"
 ```
@@ -39,9 +39,9 @@ docker-compose run git "YourName" "YourEmail"
 ### Build command (Developer's memo)
 ```
 cd ~/git/docker_git/docker/git
-docker build . -t lastshogun13/docker_git:0.0.6
-docker build . -t lastshogun13/docker_git:latest
+docker build . -t tinnakornpop/docker_git:0.0.6
+docker build . -t tinnakornpop/docker_git:latest
 docker login
-docker push lastshogun13/docker_git:0.0.6
-docker push lastshogun13/docker_git:latest
+docker push tinnakornpop/docker_git:0.0.6
+docker push tinnakornpop/docker_git:latest
 ```
