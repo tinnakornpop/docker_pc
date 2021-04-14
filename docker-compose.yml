@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  git:
+    container_name: git
+    build: ./docker/git
+    volumes:
+      - $HOME/git:/git:delegated
+      - $HOME/.netrc:/root/.netrcpc:ro

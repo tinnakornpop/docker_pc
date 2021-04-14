@@ -1,0 +1,9 @@
+version: '3'
+
+services:
+  git:
+    container_name: git
+    image: tinnakornpop/docker_pc:latest
+    volumes:
+      - $HOME/git:/git:delegated
+      - $HOME/.netrcpc:/root/.netrcpc:ro
