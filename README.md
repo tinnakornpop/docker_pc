@@ -1,4 +1,4 @@
-# compute-py
+# docker_pc no tig in git
 ## Docker image を作れました。（笑）
 
 ### example
