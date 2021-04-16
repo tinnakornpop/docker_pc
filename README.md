@@ -1,47 +1,17 @@
-# docker_pc
+# compute-py
+## Docker image を作れました。（笑）
 
-How to use
-
-### prepare for host os (Windows only)
+### example
 ```
-echo 'machine github.com
-login ******
-password ******
-' > ~/.netrcpc
+cd ~/gitpc/computer-py; cp server/env/.env.local server/.env; docker-compose up --build -d; docker-compose exec php bash
 ```
 
-| key       | value                |
-| --------- | -------------------- |
-| login     | github account name  |
-| password  | github password      |
-
-### prepare docker-compose
-
+### test
 ```
-mkdir ~/gitpc
-cd ~/gitpc
-curl --output docker-compose.yml https://raw.githubusercontent.com/tinnakornpop/docker_pc/laravel/docker-compose2.yml
+cd ~/gitpc/computer-py; docker-compose build --no-cache; docker-compose up -d; docker-compose exec app bash
 ```
 
-### How to use (recommend)
+### Use this
 ```
-cd ~/gitpc
-docker-compose run git "YourName" "YourEmail"
-```
-
-### Docker-compose build and run
-```
-cd ~/gitpc/docker_pc
-docker-compose build
-docker-compose run git "YourName" "YourEmail"
-```
-
-### Build command (Developer's memo)
-```
-cd ~/gitpc/docker_pc/docker/gitpc
-docker build . -t tinnakornpop/docker_pc:0.0.6
-docker build . -t tinnakornpop/docker_pc:latest
-docker login
-docker push tinnakornpop/docker_pc:0.0.6
-docker push tinnakornpop/docker_pc:latest
+cd ~/gitpc/computer-py; docker-compose up --build -d; docker-compose exec app bash
 ```
