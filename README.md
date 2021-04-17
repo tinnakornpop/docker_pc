@@ -11,7 +11,7 @@ cd ~/gitpc/computer-py; cp server/env/.env.local server/.env; docker-compose up 
 cd ~/gitpc/computer-py; docker-compose build --no-cache; docker-compose up -d; docker-compose exec app bash
 ```
 
-### Use this
+## Use this command
 ```
 cd ~/gitpc/computer-py; docker-compose up --build -d; docker-compose exec app bash
 ```
